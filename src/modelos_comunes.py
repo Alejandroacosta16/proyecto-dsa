@@ -26,7 +26,7 @@ RUTA_CSV = RAIZ / "data" / "processed" / "km_diario.csv"
 RUTA_DVC = RAIZ / "data" / "processed.dvc"
 
 # Se puede sobreescribir con la variable de entorno MLFLOW_TRACKING_URI
-TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI", "http://34.229.81.56:5000")
+TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI", "http://3.18.4.17:5000")
 EXPERIMENTO = "modelo_km_dia"
 OBJETIVO = "km_media_prox28"
 AUTOR = "Alejandro Acosta"
@@ -41,7 +41,7 @@ NUMERICAS = [
     "km_media7", "km_media14", "km_media28", "km_std7", "km_media_dia_semana",
     "dia_semana", "fin_de_semana", "mes",
 ]
-CATEGORICAS = ["vehiculo"]
+CATEGORICAS = ["vehiculo", "contrato"]
 FEATURES = NUMERICAS + CATEGORICAS
 
 # Validacion temporal dentro del train (gap evita solapar ventanas del objetivo)
