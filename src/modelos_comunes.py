@@ -30,7 +30,7 @@ TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI", "http://3.18.4.17:5000")
 EXPERIMENTO = "modelo_km_dia"
 OBJETIVO = "km_media_prox28"
 AUTOR = "Alejandro Acosta"
-FECHA_CORTE = "2026-09-15"
+FECHA_CORTE = "2026-07-01"
 
 # Supuesto para traducir error de km/dia a error de fecha (dias):
 # faltan KM_FALTANTES km para el proximo preventivo. Ajustar con el equipo.
@@ -46,7 +46,7 @@ FEATURES = NUMERICAS + CATEGORICAS
 
 # Validacion temporal dentro del train (gap evita solapar ventanas del objetivo)
 CV_SPLITS = 3
-CV_GAP = 35  # ~7 dias * 5 vehiculos
+CV_GAP = 28 * 11  # 28 dias (horizonte del objetivo) * 11 vehiculos
 
 
 # ------------------------------- Datos ----------------------------------
